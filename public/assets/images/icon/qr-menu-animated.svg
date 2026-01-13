@@ -1,0 +1,309 @@
+<svg width="450" height="400" viewBox="0 0 450 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="qrGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="qrGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f5f5;stop-opacity:1" />
+    </linearGradient>
+    <filter id="qrGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .qr-animation {
+        animation: qrPulse 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .phone-animation {
+        animation: phoneScan 3s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .scan-line {
+        animation: scanLine 2s linear infinite;
+      }
+      .circle-rotate {
+        animation: circleRotate 15s linear infinite;
+        transform-origin: center;
+      }
+      .product-float1 {
+        animation: productFloat1 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .product-float2 {
+        animation: productFloat2 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .product-float3 {
+        animation: productFloat3 6s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .product-float4 {
+        animation: productFloat4 4.5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes qrPulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.08);
+          opacity: 0.9;
+        }
+      }
+      @keyframes phoneScan {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(-2deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-10px) rotate(2deg);
+        }
+      }
+      @keyframes scanLine {
+        0% {
+          transform: translateY(-100);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100);
+          opacity: 0;
+        }
+      }
+      @keyframes circleRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes productFloat1 {
+        0%, 100% {
+          transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) translateX(10px) rotate(15deg);
+        }
+      }
+      @keyframes productFloat2 {
+        0%, 100% {
+          transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-18px) translateX(-8px) rotate(-12deg);
+        }
+      }
+      @keyframes productFloat3 {
+        0%, 100% {
+          transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-25px) translateX(12px) rotate(18deg);
+        }
+      }
+      @keyframes productFloat4 {
+        0%, 100% {
+          transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-16px) translateX(-10px) rotate(-15deg);
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- Rotating Circles Background -->
+  <g class="circle-rotate" transform="translate(225, 200)">
+    <circle cx="0" cy="0" r="180" fill="none" stroke="url(#qrGradient1)" stroke-width="2" opacity="0.2"/>
+    <circle cx="0" cy="0" r="160" fill="none" stroke="url(#qrGradient2)" stroke-width="2" opacity="0.15"/>
+    <circle cx="0" cy="0" r="140" fill="none" stroke="url(#qrGradient1)" stroke-width="1.5" opacity="0.1"/>
+  </g>
+  
+  <!-- Large QR Code (Center) -->
+  <g id="qr-code" class="qr-animation" transform="translate(225, 200)">
+    <!-- QR Code Background with Shadow -->
+    <rect x="-90" y="-90" width="180" height="180" rx="18" fill="white" filter="url(#qrGlow)" opacity="0.95"/>
+    <rect x="-85" y="-85" width="170" height="170" rx="14" fill="white" stroke="url(#qrGradient1)" stroke-width="4"/>
+    
+    <!-- Top Left Finder Pattern -->
+    <rect x="-75" y="-75" width="50" height="50" fill="url(#qrGradient1)" filter="url(#qrGlow)"/>
+    <rect x="-68" y="-68" width="36" height="36" fill="white"/>
+    <rect x="-61" y="-61" width="22" height="22" fill="url(#qrGradient1)"/>
+    
+    <!-- Top Right Finder Pattern -->
+    <rect x="25" y="-75" width="50" height="50" fill="url(#qrGradient2)" filter="url(#qrGlow)"/>
+    <rect x="32" y="-68" width="36" height="36" fill="white"/>
+    <rect x="39" y="-61" width="22" height="22" fill="url(#qrGradient2)"/>
+    
+    <!-- Bottom Left Finder Pattern -->
+    <rect x="-75" y="25" width="50" height="50" fill="url(#qrGradient1)" filter="url(#qrGlow)"/>
+    <rect x="-68" y="32" width="36" height="36" fill="white"/>
+    <rect x="-61" y="39" width="22" height="22" fill="url(#qrGradient1)"/>
+    
+    <!-- QR Code Data Modules -->
+    <rect x="-30" y="-75" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-8" y="-75" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="14" y="-75" width="10" height="10" fill="url(#qrGradient1)"/>
+    
+    <rect x="-75" y="-30" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-55" y="-30" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="-30" y="-30" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-8" y="-30" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="14" y="-30" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="35" y="-30" width="10" height="10" fill="url(#qrGradient2)"/>
+    
+    <rect x="-55" y="-8" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-30" y="-8" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="-8" y="-8" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="14" y="-8" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="35" y="-8" width="10" height="10" fill="url(#qrGradient1)"/>
+    
+    <rect x="-75" y="14" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-55" y="14" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="-30" y="14" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-8" y="14" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="14" y="14" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="35" y="14" width="10" height="10" fill="url(#qrGradient2)"/>
+    
+    <rect x="-55" y="35" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="-30" y="35" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="-8" y="35" width="10" height="10" fill="url(#qrGradient1)"/>
+    <rect x="14" y="35" width="10" height="10" fill="url(#qrGradient2)"/>
+    <rect x="35" y="35" width="10" height="10" fill="url(#qrGradient1)"/>
+    
+    <!-- Scan Line -->
+    <line x1="-85" y1="-85" x2="85" y2="-85" stroke="url(#qrGradient1)" stroke-width="4" opacity="0.8" class="scan-line"/>
+  </g>
+  
+  <!-- Mobile Phone (Right Side - Scanning) -->
+  <g id="phone" class="phone-animation" transform="translate(340, 200)">
+    <!-- Phone Body -->
+    <rect x="-50" y="-90" width="70" height="140" rx="16" fill="url(#phoneGradient)"/>
+    <rect x="-47" y="-87" width="64" height="134" rx="13" fill="#1a1a1a"/>
+    
+    <!-- Screen -->
+    <rect x="-44" y="-80" width="58" height="120" rx="11" fill="#ffffff"/>
+    
+    <!-- Camera (Scanning Indicator) -->
+    <circle cx="0" cy="-75" r="4" fill="#0c87f0" opacity="0.9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Scan Lines on Screen -->
+    <line x1="-40" y1="-70" x2="40" y2="-70" stroke="#0c87f0" stroke-width="2" opacity="0.6" class="scan-line"/>
+    <line x1="-40" y1="-50" x2="40" y2="-50" stroke="#0c87f0" stroke-width="2" opacity="0.4" class="scan-line" style="animation-delay: 0.5s;"/>
+    <line x1="-40" y1="-30" x2="40" y2="-30" stroke="#0c87f0" stroke-width="2" opacity="0.3" class="scan-line" style="animation-delay: 1s;"/>
+    
+    <!-- QR Code Preview on Screen -->
+    <rect x="-35" y="-20" width="30" height="30" rx="3" fill="url(#qrGradient1)" opacity="0.8"/>
+    <rect x="-30" y="-15" width="8" height="8" fill="white"/>
+    <rect x="-18" y="-15" width="8" height="8" fill="white"/>
+    <rect x="-6" y="-15" width="8" height="8" fill="white"/>
+    <rect x="-30" y="-3" width="8" height="8" fill="white"/>
+    <rect x="-18" y="-3" width="8" height="8" fill="white"/>
+    <rect x="-6" y="-3" width="8" height="8" fill="white"/>
+    <rect x="-30" y="9" width="8" height="8" fill="white"/>
+    <rect x="-18" y="9" width="8" height="8" fill="white"/>
+    <rect x="-6" y="9" width="8" height="8" fill="white"/>
+    
+    <!-- Menu Display -->
+    <rect x="-40" y="20" width="48" height="15" rx="2" fill="url(#qrGradient1)" opacity="0.9"/>
+    <rect x="-40" y="40" width="20" height="25" rx="2" fill="#f0f0f0"/>
+    <rect x="-15" y="40" width="20" height="25" rx="2" fill="#f0f0f0"/>
+    
+    <!-- Menu Items -->
+    <circle cx="-30" cy="52" r="4" fill="#7444fd"/>
+    <circle cx="-5" cy="52" r="4" fill="#0c87f0"/>
+    
+    <!-- Home Button -->
+    <circle cx="0" cy="60" r="7" fill="#666"/>
+  </g>
+  
+  <!-- Food & Drink Icons (Around Circles) -->
+  
+  <!-- Burger (Food) -->
+  <g id="burger" class="product-float1" transform="translate(120, 120)">
+    <circle cx="0" cy="0" r="28" fill="#ff6b6b" opacity="0.95"/>
+    <rect x="-14" y="-9" width="28" height="7" rx="3" fill="#8b4513"/>
+    <rect x="-14" y="-1" width="28" height="7" rx="3" fill="#ffd700"/>
+    <rect x="-14" y="7" width="28" height="7" rx="3" fill="#228b22"/>
+    <circle cx="-9" cy="0" r="3" fill="#ff6347"/>
+    <circle cx="9" cy="0" r="3" fill="#ff6347"/>
+  </g>
+  
+  <!-- Coffee Cup (Drink) -->
+  <g id="coffee" class="product-float2" transform="translate(100, 280)">
+    <rect x="-16" y="-22" width="32" height="28" rx="3" fill="#8b4513" opacity="0.95"/>
+    <ellipse cx="0" cy="-22" rx="16" ry="5" fill="#654321"/>
+    <path d="M 16 -10 Q 22 -10 22 -5 Q 22 0 16 0" stroke="#8b4513" stroke-width="2.5" fill="none"/>
+    <circle cx="5" cy="-16" r="2.5" fill="#ffd700"/>
+    <circle cx="-5" cy="-13" r="2" fill="#ffd700"/>
+  </g>
+  
+  <!-- Pizza (Food) -->
+  <g id="pizza" class="product-float3" transform="translate(330, 120)">
+    <circle cx="0" cy="0" r="30" fill="#ffa500" opacity="0.95"/>
+    <path d="M -20 -20 L 20 20 M 20 -20 L -20 20" stroke="#8b4513" stroke-width="2.5"/>
+    <circle cx="-10" cy="-10" r="4" fill="#ff6347"/>
+    <circle cx="10" cy="10" r="4" fill="#ff6347"/>
+    <circle cx="10" cy="-10" r="4" fill="#228b22"/>
+    <circle cx="-10" cy="10" r="4" fill="#ffd700"/>
+    <circle cx="0" cy="0" r="3" fill="#ff6347"/>
+  </g>
+  
+  <!-- Drink Bottle -->
+  <g id="drink" class="product-float4" transform="translate(330, 280)">
+    <rect x="-9" y="-28" width="18" height="32" rx="2.5" fill="#0c87f0" opacity="0.95"/>
+    <ellipse cx="0" cy="-28" rx="9" ry="3.5" fill="#4ecdc4"/>
+    <rect x="-5" y="-23" width="10" height="23" fill="#87ceeb"/>
+    <circle cx="0" cy="-11" r="2.5" fill="#ffd700"/>
+    <path d="M -9 -28 Q -11 -33 -9 -38" stroke="#0c87f0" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Ice Cream (Food) -->
+  <g id="icecream" class="product-float1" transform="translate(80, 200)" style="animation-delay: 0.5s;">
+    <path d="M -9 0 Q 0 -22 9 0 Z" fill="#ffb6c1" opacity="0.95"/>
+    <rect x="-7" y="0" width="14" height="18" rx="2" fill="#8b4513"/>
+    <circle cx="-4" cy="-7" r="2.5" fill="#ff6347"/>
+    <circle cx="4" cy="-7" r="2.5" fill="#ffd700"/>
+    <circle cx="0" cy="-13" r="2.5" fill="#ff69b4"/>
+  </g>
+  
+  <!-- Sandwich (Food) -->
+  <g id="sandwich" class="product-float2" transform="translate(370, 200)" style="animation-delay: 0.7s;">
+    <rect x="-16" y="-5" width="32" height="11" rx="2" fill="#8b4513" opacity="0.95"/>
+    <rect x="-16" y="-5" width="32" height="3" fill="#ffd700"/>
+    <rect x="-16" y="3" width="32" height="3" fill="#228b22"/>
+    <circle cx="-9" cy="0" r="2" fill="#ff6347"/>
+    <circle cx="9" cy="0" r="2" fill="#ff6347"/>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="150" r="12" fill="#7444fd" opacity="0.3" class="product-float1" style="animation-delay: 0.5s;"/>
+  <circle cx="350" cy="150" r="10" fill="#0c87f0" opacity="0.3" class="product-float2" style="animation-delay: 1s;"/>
+  <circle cx="100" cy="350" r="8" fill="#4ecdc4" opacity="0.3" class="product-float3" style="animation-delay: 1.5s;"/>
+  <circle cx="350" cy="350" r="15" fill="#ff6b6b" opacity="0.3" class="product-float4" style="animation-delay: 2s;"/>
+</svg>
+

@@ -1,0 +1,157 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="newsGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="newsGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7444fd;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .newspaper-float {
+        animation: newspaperFloat 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .article-float {
+        animation: articleFloat 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .mobile-float {
+        animation: mobileFloat 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .headline-pulse {
+        animation: headlinePulse 2s ease-in-out infinite;
+      }
+      @keyframes newspaperFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(-3deg); }
+      }
+      @keyframes articleFloat {
+        0%, 100% { transform: translateY(0px) scale(1); opacity: 0.8; }
+        50% { transform: translateY(-15px) scale(1.05); opacity: 1; }
+      }
+      @keyframes mobileFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+      }
+      @keyframes headlinePulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Newspaper Background -->
+  <g id="newspaper" class="newspaper-float" transform="translate(150, 200)">
+    <!-- Newspaper Sheet -->
+    <rect x="-100" y="-120" width="200" height="240" rx="5" fill="#ffffff" opacity="0.9" filter="url(#glow)"/>
+    <rect x="-95" y="-115" width="190" height="230" rx="4" fill="#f9f9f9"/>
+    
+    <!-- Newspaper Header -->
+    <rect x="-95" y="-115" width="190" height="25" fill="url(#newsGradient1)"/>
+    <text x="0" y="-100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">الأخبار اليومية</text>
+    
+    <!-- Headline -->
+    <rect x="-90" y="-85" width="180" height="15" rx="2" fill="url(#newsGradient2)" class="headline-pulse"/>
+    <rect x="-90" y="-65" width="160" height="8" rx="2" fill="#333" opacity="0.6"/>
+    <rect x="-90" y="-55" width="140" height="8" rx="2" fill="#666" opacity="0.5"/>
+    
+    <!-- Article 1 -->
+    <rect x="-90" y="-40" width="85" height="60" rx="3" fill="white" stroke="url(#newsGradient1)" stroke-width="1" class="article-float"/>
+    <rect x="-85" y="-35" width="30" height="20" rx="2" fill="url(#newsGradient1)" opacity="0.5"/>
+    <rect x="-50" y="-35" width="40" height="5" rx="1" fill="#333"/>
+    <rect x="-50" y="-28" width="35" height="4" rx="1" fill="#666"/>
+    <rect x="-85" y="-10" width="75" height="4" rx="1" fill="#999"/>
+    <rect x="-85" y="-4" width="70" height="4" rx="1" fill="#999"/>
+    
+    <!-- Article 2 -->
+    <rect x="5" y="-40" width="85" height="60" rx="3" fill="white" stroke="url(#newsGradient2)" stroke-width="1" class="article-float" style="animation-delay: 0.5s;"/>
+    <rect x="10" y="-35" width="30" height="20" rx="2" fill="url(#newsGradient2)" opacity="0.5"/>
+    <rect x="45" y="-35" width="40" height="5" rx="1" fill="#333"/>
+    <rect x="45" y="-28" width="35" height="4" rx="1" fill="#666"/>
+    <rect x="10" y="-10" width="75" height="4" rx="1" fill="#999"/>
+    <rect x="10" y="-4" width="70" height="4" rx="1" fill="#999"/>
+    
+    <!-- More Articles -->
+    <rect x="-90" y="25" width="85" height="50" rx="3" fill="white" stroke="url(#newsGradient1)" stroke-width="1" class="article-float" style="animation-delay: 1s;"/>
+    <rect x="-85" y="30" width="25" height="15" rx="2" fill="url(#newsGradient1)" opacity="0.4"/>
+    <rect x="-55" y="30" width="35" height="4" rx="1" fill="#333"/>
+    <rect x="-55" y="37" width="30" height="4" rx="1" fill="#666"/>
+    <rect x="-85" y="50" width="70" height="3" rx="1" fill="#999"/>
+    <rect x="-85" y="56" width="65" height="3" rx="1" fill="#999"/>
+    
+    <rect x="5" y="25" width="85" height="50" rx="3" fill="white" stroke="url(#newsGradient2)" stroke-width="1" class="article-float" style="animation-delay: 1.5s;"/>
+    <rect x="10" y="30" width="25" height="15" rx="2" fill="url(#newsGradient2)" opacity="0.4"/>
+    <rect x="40" y="30" width="35" height="4" rx="1" fill="#333"/>
+    <rect x="40" y="37" width="30" height="4" rx="1" fill="#666"/>
+    <rect x="10" y="50" width="70" height="3" rx="1" fill="#999"/>
+    <rect x="10" y="56" width="65" height="3" rx="1" fill="#999"/>
+  </g>
+  
+  <!-- Mobile Phone with News App -->
+  <g id="mobile" class="mobile-float" transform="translate(450, 250)">
+    <!-- Phone Body -->
+    <rect x="-60" y="-100" width="120" height="200" rx="25" fill="#1a1a1a" filter="url(#glow)"/>
+    <rect x="-55" y="-95" width="110" height="190" rx="20" fill="#2a2a2a"/>
+    <rect x="-50" y="-90" width="100" height="180" rx="15" fill="#ffffff"/>
+    
+    <!-- App Screen -->
+    <rect x="-45" y="-85" width="90" height="170" rx="10" fill="#f5f5f5"/>
+    
+    <!-- App Header -->
+    <rect x="-45" y="-85" width="90" height="30" rx="10" fill="url(#newsGradient1)"/>
+    <text x="0" y="-70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">الأخبار</text>
+    
+    <!-- News Article 1 -->
+    <rect x="-40" y="-50" width="80" height="45" rx="5" fill="white" stroke="url(#newsGradient1)" stroke-width="1"/>
+    <rect x="-35" y="-45" width="25" height="18" rx="2" fill="url(#newsGradient1)" opacity="0.6"/>
+    <rect x="-5" y="-45" width="30" height="6" rx="1" fill="#333"/>
+    <rect x="-5" y="-37" width="25" height="4" rx="1" fill="#666"/>
+    <rect x="-35" y="-25" width="70" height="3" rx="1" fill="#999"/>
+    <rect x="-35" y="-20" width="65" height="3" rx="1" fill="#999"/>
+    
+    <!-- News Article 2 -->
+    <rect x="-40" y="0" width="80" height="45" rx="5" fill="white" stroke="url(#newsGradient2)" stroke-width="1"/>
+    <rect x="-35" y="5" width="25" height="18" rx="2" fill="url(#newsGradient2)" opacity="0.6"/>
+    <rect x="-5" y="5" width="30" height="6" rx="1" fill="#333"/>
+    <rect x="-5" y="13" width="25" height="4" rx="1" fill="#666"/>
+    <rect x="-35" y="25" width="70" height="3" rx="1" fill="#999"/>
+    <rect x="-35" y="30" width="65" height="3" rx="1" fill="#999"/>
+    
+    <!-- Navigation Icons -->
+    <circle cx="-20" cy="75" r="4" fill="url(#newsGradient1)"/>
+    <circle cx="0" cy="75" r="4" fill="url(#newsGradient2)"/>
+    <circle cx="20" cy="75" r="4" fill="url(#newsGradient1)"/>
+    
+    <!-- Home Button -->
+    <circle cx="0" cy="95" r="12" fill="#666"/>
+    <rect x="-3" y="92" width="6" height="6" rx="1" fill="#999"/>
+  </g>
+  
+  <!-- Decorative News Icons -->
+  <g id="news-icons" transform="translate(100, 100)">
+    <!-- News Icon 1 -->
+    <rect x="-20" y="-20" width="40" height="40" rx="5" fill="url(#newsGradient1)" opacity="0.8" class="article-float"/>
+    <rect x="-15" y="-15" width="30" height="8" rx="2" fill="white"/>
+    <rect x="-15" y="-5" width="25" height="6" rx="2" fill="white" opacity="0.8"/>
+    <rect x="-15" y="3" width="20" height="6" rx="2" fill="white" opacity="0.6"/>
+  </g>
+  
+  <g id="news-icons2" transform="translate(500, 350)">
+    <!-- News Icon 2 -->
+    <rect x="-20" y="-20" width="40" height="40" rx="5" fill="url(#newsGradient2)" opacity="0.8" class="article-float" style="animation-delay: 1s;"/>
+    <rect x="-15" y="-15" width="30" height="8" rx="2" fill="white"/>
+    <rect x="-15" y="-5" width="25" height="6" rx="2" fill="white" opacity="0.8"/>
+    <rect x="-15" y="3" width="20" height="6" rx="2" fill="white" opacity="0.6"/>
+  </g>
+</svg>
+

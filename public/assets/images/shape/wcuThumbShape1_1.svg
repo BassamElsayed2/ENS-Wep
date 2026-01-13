@@ -1,0 +1,116 @@
+<svg width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:0.15">
+        <animate attributeName="stop-color" values="#7444fd;#0c87f0;#ff6b6b;#4ecdc4;#7444fd" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:0.1">
+        <animate attributeName="stop-color" values="#0c87f0;#ff6b6b;#4ecdc4;#7444fd;#0c87f0" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.12">
+        <animate attributeName="stop-color" values="#ff6b6b;#4ecdc4;#7444fd;#0c87f0;#ff6b6b" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:0.08">
+        <animate attributeName="stop-color" values="#4ecdc4;#7444fd;#0c87f0;#ff6b6b;#4ecdc4" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:0.1">
+        <animate attributeName="stop-color" values="#0c87f0;#ff6b6b;#4ecdc4;#7444fd;#0c87f0" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#7444fd;stop-opacity:0.08">
+        <animate attributeName="stop-color" values="#7444fd;#0c87f0;#ff6b6b;#4ecdc4;#7444fd" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="radialGradient1" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:0.15">
+        <animate attributeName="stop-color" values="#7444fd;#0c87f0;#ff6b6b;#4ecdc4;#7444fd" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#7444fd;stop-opacity:0">
+        <animate attributeName="stop-color" values="#7444fd;#0c87f0;#ff6b6b;#4ecdc4;#7444fd" dur="9s" repeatCount="indefinite"/>
+      </stop>
+    </radialGradient>
+    
+    <radialGradient id="radialGradient2" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:0.12">
+        <animate attributeName="stop-color" values="#0c87f0;#ff6b6b;#4ecdc4;#7444fd;#0c87f0" dur="11s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:0">
+        <animate attributeName="stop-color" values="#0c87f0;#ff6b6b;#4ecdc4;#7444fd;#0c87f0" dur="11s" repeatCount="indefinite"/>
+      </stop>
+    </radialGradient>
+    
+    <style>
+      .circle-float {
+        animation: circleFloat 6s ease-in-out infinite;
+      }
+      .circle-float-delayed1 {
+        animation: circleFloat 6s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+      .circle-float-delayed2 {
+        animation: circleFloat 6s ease-in-out infinite;
+        animation-delay: 2s;
+      }
+      .circle-float-delayed3 {
+        animation: circleFloat 6s ease-in-out infinite;
+        animation-delay: 3s;
+      }
+      .circle-rotate {
+        animation: circleRotate 20s linear infinite;
+        transform-origin: center;
+      }
+      @keyframes circleFloat {
+        0%, 100% {
+          transform: translateY(0px) scale(1);
+        }
+        50% {
+          transform: translateY(-20px) scale(1.1);
+        }
+      }
+      @keyframes circleRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </defs>
+  
+  <!-- Large Outer Circle -->
+  <circle cx="225" cy="225" r="200" fill="url(#gradient1)" class="circle-float circle-rotate" opacity="0.15"/>
+  
+  <!-- Medium Circle -->
+  <circle cx="225" cy="225" r="150" fill="url(#gradient2)" class="circle-float-delayed1" opacity="0.12"/>
+  
+  <!-- Inner Circle -->
+  <circle cx="225" cy="225" r="100" fill="url(#gradient3)" class="circle-float-delayed2" opacity="0.1"/>
+  
+  <!-- Decorative Circles -->
+  <circle cx="100" cy="100" r="40" fill="url(#radialGradient1)" class="circle-float-delayed3" opacity="0.15"/>
+  <circle cx="350" cy="100" r="35" fill="url(#radialGradient2)" class="circle-float-delayed1" opacity="0.12"/>
+  <circle cx="100" cy="350" r="30" fill="url(#radialGradient1)" class="circle-float-delayed2" opacity="0.15"/>
+  <circle cx="350" cy="350" r="45" fill="url(#radialGradient2)" class="circle-float-delayed3" opacity="0.12"/>
+  
+  <!-- Small Accent Circles -->
+  <circle cx="225" cy="50" r="20" fill="#7444fd" class="circle-float" opacity="0.1">
+    <animate attributeName="fill" values="#7444fd;#0c87f0;#ff6b6b;#4ecdc4;#7444fd" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="225" cy="400" r="25" fill="#0c87f0" class="circle-float-delayed1" opacity="0.1">
+    <animate attributeName="fill" values="#0c87f0;#ff6b6b;#4ecdc4;#7444fd;#0c87f0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="50" cy="225" r="18" fill="#ff6b6b" class="circle-float-delayed2" opacity="0.1">
+    <animate attributeName="fill" values="#ff6b6b;#4ecdc4;#7444fd;#0c87f0;#ff6b6b" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="225" r="22" fill="#4ecdc4" class="circle-float-delayed3" opacity="0.1">
+    <animate attributeName="fill" values="#4ecdc4;#7444fd;#0c87f0;#ff6b6b;#4ecdc4" dur="10s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+

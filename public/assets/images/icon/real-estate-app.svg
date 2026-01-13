@@ -1,0 +1,141 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="buildingGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7444fd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa500;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .building-float {
+        animation: buildingFloat 4s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      .window-blink {
+        animation: windowBlink 3s ease-in-out infinite;
+      }
+      .window-blink-delay1 {
+        animation: windowBlink 3s ease-in-out infinite;
+        animation-delay: 0.5s;
+      }
+      .window-blink-delay2 {
+        animation: windowBlink 3s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+      .window-blink-delay3 {
+        animation: windowBlink 3s ease-in-out infinite;
+        animation-delay: 1.5s;
+      }
+      .mobile-float {
+        animation: mobileFloat 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes buildingFloat {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-15px) scale(1.02); }
+      }
+      @keyframes windowBlink {
+        0%, 90%, 100% { opacity: 0.3; }
+        45% { opacity: 1; }
+      }
+      @keyframes mobileFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background Buildings -->
+  <g id="buildings" class="building-float">
+    <!-- Building 1 (Left) -->
+    <rect x="50" y="150" width="120" height="250" rx="8" fill="url(#buildingGradient1)" opacity="0.9" filter="url(#glow)"/>
+    <rect x="60" y="160" width="100" height="230" rx="6" fill="url(#buildingGradient1)"/>
+    
+    <!-- Windows Building 1 -->
+    <rect x="75" y="180" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="110" y="180" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+    <rect x="75" y="220" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay2" opacity="0.8"/>
+    <rect x="110" y="220" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay3" opacity="0.8"/>
+    <rect x="75" y="260" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="110" y="260" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+    <rect x="75" y="300" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay2" opacity="0.8"/>
+    <rect x="110" y="300" width="25" height="30" rx="3" fill="url(#windowGradient)" class="window-blink-delay3" opacity="0.8"/>
+    
+    <!-- Building 2 (Center) -->
+    <rect x="200" y="100" width="150" height="300" rx="10" fill="url(#buildingGradient2)" opacity="0.9" filter="url(#glow)"/>
+    <rect x="210" y="110" width="130" height="280" rx="8" fill="url(#buildingGradient2)"/>
+    
+    <!-- Windows Building 2 -->
+    <rect x="230" y="140" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="280" y="140" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+    <rect x="230" y="190" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay2" opacity="0.8"/>
+    <rect x="280" y="190" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay3" opacity="0.8"/>
+    <rect x="230" y="240" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="280" y="240" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+    <rect x="230" y="290" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay2" opacity="0.8"/>
+    <rect x="280" y="290" width="30" height="35" rx="4" fill="url(#windowGradient)" class="window-blink-delay3" opacity="0.8"/>
+    
+    <!-- Building 3 (Right) -->
+    <rect x="380" y="180" width="100" height="220" rx="8" fill="url(#buildingGradient1)" opacity="0.9" filter="url(#glow)"/>
+    <rect x="390" y="190" width="80" height="200" rx="6" fill="url(#buildingGradient1)"/>
+    
+    <!-- Windows Building 3 -->
+    <rect x="405" y="210" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="435" y="210" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+    <rect x="405" y="250" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink-delay2" opacity="0.8"/>
+    <rect x="435" y="250" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink-delay3" opacity="0.8"/>
+    <rect x="405" y="290" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink" opacity="0.8"/>
+    <rect x="435" y="290" width="20" height="25" rx="2" fill="url(#windowGradient)" class="window-blink-delay1" opacity="0.8"/>
+  </g>
+  
+  <!-- Mobile Phone with Real Estate App -->
+  <g id="mobile" class="mobile-float" transform="translate(300, 250)">
+    <!-- Phone Body -->
+    <rect x="-60" y="-100" width="120" height="200" rx="25" fill="#1a1a1a" filter="url(#glow)"/>
+    <rect x="-55" y="-95" width="110" height="190" rx="20" fill="#2a2a2a"/>
+    <rect x="-50" y="-90" width="100" height="180" rx="15" fill="#ffffff"/>
+    
+    <!-- App Screen -->
+    <rect x="-45" y="-85" width="90" height="170" rx="10" fill="#f5f5f5"/>
+    
+    <!-- App Header -->
+    <rect x="-45" y="-85" width="90" height="30" rx="10" fill="url(#buildingGradient1)"/>
+    <text x="0" y="-70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">العقارات</text>
+    
+    <!-- Property Card 1 -->
+    <rect x="-40" y="-50" width="80" height="50" rx="5" fill="white" stroke="url(#buildingGradient1)" stroke-width="2"/>
+    <rect x="-35" y="-45" width="30" height="25" rx="3" fill="url(#buildingGradient1)" opacity="0.7"/>
+    <rect x="0" y="-45" width="30" height="8" rx="2" fill="#333"/>
+    <rect x="0" y="-35" width="25" height="6" rx="2" fill="#666"/>
+    <rect x="0" y="-27" width="20" height="6" rx="2" fill="#999"/>
+    
+    <!-- Property Card 2 -->
+    <rect x="-40" y="5" width="80" height="50" rx="5" fill="white" stroke="url(#buildingGradient2)" stroke-width="2"/>
+    <rect x="-35" y="10" width="30" height="25" rx="3" fill="url(#buildingGradient2)" opacity="0.7"/>
+    <rect x="0" y="10" width="30" height="8" rx="2" fill="#333"/>
+    <rect x="0" y="20" width="25" height="6" rx="2" fill="#666"/>
+    <rect x="0" y="28" width="20" height="6" rx="2" fill="#999"/>
+    
+    <!-- Home Button -->
+    <circle cx="0" cy="95" r="12" fill="#666"/>
+    <rect x="-3" y="92" width="6" height="6" rx="1" fill="#999"/>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="15" fill="#7444fd" opacity="0.3" class="building-float" style="animation-delay: 0.5s;"/>
+  <circle cx="500" cy="120" r="12" fill="#0c87f0" opacity="0.3" class="building-float" style="animation-delay: 1s;"/>
+</svg>
+

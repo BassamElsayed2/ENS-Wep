@@ -1,0 +1,126 @@
+"use client";
+import { useState, useEffect } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+
+import brandsData from "../../Data/brand1.json";
+import SectionTitle from "../Common/SectionTitle";
+
+const OurWorks = () => {
+  const t = useTranslations("OurWorks");
+  const locale = useLocale();
+  const [brands, setBrands] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBrands = async () => {
+      try {
+        setLoading(true);
+        const data = await getAllBrands();
+        if (data && data.length > 0) {
+          setBrands(data);
+        } else {
+          setBrands(brandsData);
+        }
+      } catch (error) {
+        setBrands(brandsData);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBrands();
+  }, []);
+
+  const settings = {
+    dots: false,
+    infinite: brands.length >= 5,
+    speed: 2000,
+    slidesToShow: brands.length >= 5 ? 5 : brands.length,
+    slidesToScroll: 1,
+    arrows: false,
+    swipeToSlide: true,
+    autoplay: brands.length > 0,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1399,
+        settings: {
+          slidesToShow: brands.length >= 4 ? 4 : brands.length,
+        },
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: brands.length >= 3 ? 3 : brands.length,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  if (loading) {
+    return null;
+  }
+
+  if (!brands || brands.length === 0) {
+    return null;
+  }
+
+  return (
+    <div
+      className="our-works-section section-padding fix"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
+      <div className="brand-slider-container-wrapper style1">
+        <div className="container">
+          <div className="brand-slider-wrapper style1">
+            <div
+              className="section-title text-center mxw-685 mx-auto wow fadeInUp"
+              data-wow-delay=".2s"
+            >
+              <SectionTitle SubTitle={t("SubTitle")} Title={t("Title")} />
+            </div>
+            <div className="row">
+              <div className="slider-area brandSliderOne">
+                <div className="swiper gt-slider" id="ourWorksSlider">
+                  <div className="swiper-wrapper">
+                    <Slider {...settings}>
+                      {brands.map((brand, index) => (
+                        <div key={brand.id || index} className="swiper-slide">
+                          <div className="brand-logo">
+                            <Image
+                              src={brand.img}
+                              alt={`Brand ${brand.id || index + 1}`}
+                              width={400}
+                              height={120}
+                              className="brand-image"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </Slider>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurWorks;

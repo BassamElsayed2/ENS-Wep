@@ -1,0 +1,217 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7444fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0c87f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="appGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c87f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7444fd;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa500;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .app-float1 {
+        animation: appFloat1 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .app-float2 {
+        animation: appFloat2 5.5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .building-float {
+        animation: buildingFloat 4s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      .window-blink {
+        animation: windowBlink 3s ease-in-out infinite;
+      }
+      .newspaper-float {
+        animation: newspaperFloat 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .article-float {
+        animation: articleFloat 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .mobile-float {
+        animation: mobileFloat 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes appFloat1 {
+        0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+        50% { transform: translateY(-25px) translateX(-10px) rotate(-5deg) scale(1.05); }
+      }
+      @keyframes appFloat2 {
+        0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); }
+        50% { transform: translateY(-25px) translateX(10px) rotate(5deg) scale(1.05); }
+      }
+      @keyframes buildingFloat {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-15px) scale(1.02); }
+      }
+      @keyframes windowBlink {
+        0%, 90%, 100% { opacity: 0.4; }
+        45% { opacity: 1; }
+      }
+      @keyframes newspaperFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(-3deg); }
+      }
+      @keyframes articleFloat {
+        0%, 100% { transform: translateY(0px) scale(1); opacity: 0.9; }
+        50% { transform: translateY(-15px) scale(1.05); opacity: 1; }
+      }
+      @keyframes mobileFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Real Estate App Icon (Left) -->
+  <g id="real-estate-app" class="app-float1" transform="translate(150, 250)">
+    <!-- Background Circle -->
+    <circle cx="0" cy="0" r="160" fill="url(#appGradient1)" opacity="0.2" filter="url(#glow)"/>
+    
+    <!-- Buildings - Larger and More Visible -->
+    <g class="building-float">
+      <!-- Building 1 (Left) -->
+      <rect x="-100" y="-60" width="80" height="160" rx="8" fill="url(#appGradient1)" opacity="1" filter="url(#glow)"/>
+      <rect x="-95" y="-55" width="70" height="150" rx="6" fill="url(#appGradient1)"/>
+      <!-- Windows - Larger -->
+      <rect x="-85" y="-40" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="-65" y="-40" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="-85" y="-10" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="-65" y="-10" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+      <rect x="-85" y="20" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="-65" y="20" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="-85" y="50" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="-65" y="50" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+      
+      <!-- Building 2 (Center) - Tallest -->
+      <rect x="-30" y="-80" width="90" height="180" rx="10" fill="url(#appGradient2)" opacity="1" filter="url(#glow)"/>
+      <rect x="-25" y="-75" width="80" height="170" rx="8" fill="url(#appGradient2)"/>
+      <!-- Windows - Larger -->
+      <rect x="-10" y="-55" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="15" y="-55" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="-10" y="-20" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="15" y="-20" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+      <rect x="-10" y="15" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="15" y="15" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="-10" y="50" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="15" y="50" width="20" height="25" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+      
+      <!-- Building 3 (Right) -->
+      <rect x="60" y="-50" width="70" height="150" rx="8" fill="url(#appGradient1)" opacity="1" filter="url(#glow)"/>
+      <rect x="65" y="-45" width="60" height="140" rx="6" fill="url(#appGradient1)"/>
+      <!-- Windows - Larger -->
+      <rect x="75" y="-25" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="95" y="-25" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="75" y="5" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="95" y="5" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+      <rect x="75" y="35" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1"/>
+      <rect x="95" y="35" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 0.5s;"/>
+      <rect x="75" y="65" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1s;"/>
+      <rect x="95" y="65" width="18" height="22" rx="3" fill="url(#windowGradient)" class="window-blink" opacity="1" style="animation-delay: 1.5s;"/>
+    </g>
+    
+    <!-- Mobile Phone - Larger -->
+    <g class="mobile-float" transform="translate(0, 80)">
+      <rect x="-45" y="-70" width="90" height="140" rx="20" fill="#1a1a1a" filter="url(#glow)"/>
+      <rect x="-40" y="-65" width="80" height="130" rx="15" fill="#2a2a2a"/>
+      <rect x="-35" y="-60" width="70" height="120" rx="12" fill="#ffffff"/>
+      <rect x="-30" y="-55" width="60" height="110" rx="10" fill="#f5f5f5"/>
+      <!-- App Header -->
+      <rect x="-30" y="-55" width="60" height="20" rx="6" fill="url(#appGradient1)"/>
+      <text x="0" y="-42" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">العقارات</text>
+      <!-- Property Card -->
+      <rect x="-25" y="-30" width="50" height="35" rx="4" fill="white" stroke="url(#appGradient1)" stroke-width="2"/>
+      <rect x="-20" y="-25" width="20" height="15" rx="3" fill="url(#appGradient1)" opacity="0.8"/>
+      <rect x="5" y="-25" width="25" height="6" rx="1" fill="#333"/>
+      <rect x="5" y="-17" width="20" height="5" rx="1" fill="#666"/>
+      <rect x="5" y="-10" width="18" height="4" rx="1" fill="#999"/>
+    </g>
+  </g>
+  
+  <!-- News App Icon (Right) -->
+  <g id="news-app" class="app-float2" transform="translate(450, 250)">
+    <!-- Background Circle -->
+    <circle cx="0" cy="0" r="160" fill="url(#appGradient2)" opacity="0.2" filter="url(#glow)"/>
+    
+    <!-- Newspaper - Larger and More Visible -->
+    <g class="newspaper-float" transform="translate(0, -50)">
+      <rect x="-90" y="-100" width="180" height="200" rx="8" fill="#ffffff" opacity="1" filter="url(#glow)"/>
+      <rect x="-85" y="-95" width="170" height="190" rx="6" fill="#f9f9f9"/>
+      
+      <!-- Header -->
+      <rect x="-85" y="-95" width="170" height="30" fill="url(#appGradient2)"/>
+      <text x="0" y="-77" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">الأخبار اليومية</text>
+      
+      <!-- Headline - Larger -->
+      <rect x="-80" y="-60" width="160" height="18" rx="3" fill="url(#appGradient1)" opacity="1"/>
+      <rect x="-80" y="-38" width="140" height="8" rx="2" fill="#333" opacity="0.8"/>
+      <rect x="-80" y="-28" width="120" height="8" rx="2" fill="#666" opacity="0.7"/>
+      
+      <!-- Articles - Larger -->
+      <rect x="-80" y="-15" width="75" height="55" rx="4" fill="white" stroke="url(#appGradient1)" stroke-width="2" class="article-float"/>
+      <rect x="-75" y="-10" width="30" height="18" rx="3" fill="url(#appGradient1)" opacity="0.7"/>
+      <rect x="-40" y="-10" width="30" height="6" rx="1" fill="#333"/>
+      <rect x="-75" y="5" width="60" height="5" rx="1" fill="#999"/>
+      <rect x="-75" y="12" width="55" height="5" rx="1" fill="#999"/>
+      <rect x="-75" y="20" width="50" height="4" rx="1" fill="#999"/>
+      
+      <rect x="5" y="-15" width="75" height="55" rx="4" fill="white" stroke="url(#appGradient2)" stroke-width="2" class="article-float" style="animation-delay: 0.5s;"/>
+      <rect x="10" y="-10" width="30" height="18" rx="3" fill="url(#appGradient2)" opacity="0.7"/>
+      <rect x="45" y="-10" width="30" height="6" rx="1" fill="#333"/>
+      <rect x="10" y="5" width="60" height="5" rx="1" fill="#999"/>
+      <rect x="10" y="12" width="55" height="5" rx="1" fill="#999"/>
+      <rect x="10" y="20" width="50" height="4" rx="1" fill="#999"/>
+      
+      <rect x="-80" y="45" width="75" height="45" rx="4" fill="white" stroke="url(#appGradient1)" stroke-width="2" class="article-float" style="animation-delay: 1s;"/>
+      <rect x="-75" y="50" width="25" height="15" rx="2" fill="url(#appGradient1)" opacity="0.6"/>
+      <rect x="-45" y="50" width="25" height="6" rx="1" fill="#333"/>
+      <rect x="-75" y="65" width="55" height="4" rx="1" fill="#999"/>
+      <rect x="-75" y="72" width="50" height="4" rx="1" fill="#999"/>
+      
+      <rect x="5" y="45" width="75" height="45" rx="4" fill="white" stroke="url(#appGradient2)" stroke-width="2" class="article-float" style="animation-delay: 1.5s;"/>
+      <rect x="10" y="50" width="25" height="15" rx="2" fill="url(#appGradient2)" opacity="0.6"/>
+      <rect x="40" y="50" width="25" height="6" rx="1" fill="#333"/>
+      <rect x="10" y="65" width="55" height="4" rx="1" fill="#999"/>
+      <rect x="10" y="72" width="50" height="4" rx="1" fill="#999"/>
+    </g>
+    
+    <!-- Mobile Phone - Larger -->
+    <g class="mobile-float" transform="translate(0, 80)">
+      <rect x="-45" y="-70" width="90" height="140" rx="20" fill="#1a1a1a" filter="url(#glow)"/>
+      <rect x="-40" y="-65" width="80" height="130" rx="15" fill="#2a2a2a"/>
+      <rect x="-35" y="-60" width="70" height="120" rx="12" fill="#ffffff"/>
+      <rect x="-30" y="-55" width="60" height="110" rx="10" fill="#f5f5f5"/>
+      <!-- App Header -->
+      <rect x="-30" y="-55" width="60" height="20" rx="6" fill="url(#appGradient2)"/>
+      <text x="0" y="-42" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">الأخبار</text>
+      <!-- News Article -->
+      <rect x="-25" y="-30" width="50" height="35" rx="4" fill="white" stroke="url(#appGradient2)" stroke-width="2"/>
+      <rect x="-20" y="-25" width="20" height="15" rx="3" fill="url(#appGradient2)" opacity="0.8"/>
+      <rect x="5" y="-25" width="25" height="6" rx="1" fill="#333"/>
+      <rect x="5" y="-17" width="20" height="5" rx="1" fill="#666"/>
+      <rect x="-20" y="-8" width="40" height="3" rx="1" fill="#999"/>
+      <rect x="-20" y="-3" width="38" height="3" rx="1" fill="#999"/>
+      <rect x="-20" y="3" width="35" height="3" rx="1" fill="#999"/>
+    </g>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="80" cy="80" r="25" fill="#7444fd" opacity="0.3" class="app-float1" style="animation-delay: 0.5s;"/>
+  <circle cx="520" cy="80" r="22" fill="#0c87f0" opacity="0.3" class="app-float2" style="animation-delay: 1s;"/>
+  <circle cx="300" cy="420" r="20" fill="#7444fd" opacity="0.3" class="app-float1" style="animation-delay: 1.5s;"/>
+</svg>

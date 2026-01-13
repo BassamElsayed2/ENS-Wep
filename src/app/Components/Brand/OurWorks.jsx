@@ -14,23 +14,10 @@ const OurWorks = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchBrands = async () => {
-      try {
-        setLoading(true);
-        const data = await getAllBrands();
-        if (data && data.length > 0) {
-          setBrands(data);
-        } else {
-          setBrands(brandsData);
-        }
-      } catch (error) {
-        setBrands(brandsData);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBrands();
+    // استخدام البيانات الثابتة مباشرة
+    setLoading(true);
+    setBrands(brandsData);
+    setLoading(false);
   }, []);
 
   const settings = {

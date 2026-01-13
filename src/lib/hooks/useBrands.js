@@ -1,12 +1,12 @@
 /**
  * useBrands Hook
- * React hook for fetching brands data
+ * React hook for fetching brands data (static data)
  */
 
 "use client";
 
 import { useState, useEffect } from "react";
-import { getAllBrands } from "../api/brands";
+import brandsData from "../../app/Data/brand1.json";
 import { mapBrandsToComponent } from "../utils/dataMapper";
 
 /**
@@ -19,37 +19,19 @@ export function useBrands() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true;
+    try {
+      setLoading(true);
+      setError(null);
 
-    async function fetchData() {
-      try {
-        setLoading(true);
-        setError(null);
-
-        const response = await getAllBrands();
-
-        if (isMounted) {
-          const mappedData = mapBrandsToComponent(response);
-          setData(mappedData);
-        }
-      } catch (err) {
-        if (isMounted) {
-          // تجاهل أخطاء API بصمت - البيانات ستكون فارغة
-          setError(null);
-          setData([]);
-        }
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
-      }
+      // استخدام البيانات الثابتة مباشرة
+      const mappedData = mapBrandsToComponent(brandsData || []);
+      setData(mappedData);
+    } catch (err) {
+      setError(null);
+      setData([]);
+    } finally {
+      setLoading(false);
     }
-
-    fetchData();
-
-    return () => {
-      isMounted = false;
-    };
   }, []);
 
   return { data, loading, error };

@@ -13,26 +13,10 @@ const Brand1 = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchBrands = async () => {
-      try {
-        setLoading(true);
-        const data = await getAllBrands();
-        // إذا كان API فارغ أو فشل، استخدم البيانات المحلية
-        if (data && data.length > 0) {
-          setBrands(data);
-        } else {
-          // استخدام البيانات المحلية بصمت
-          setBrands(brandsData);
-        }
-      } catch (error) {
-        // استخدام البيانات المحلية عند فشل API بدون رسالة خطأ مزعجة
-        setBrands(brandsData);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBrands();
+    // استخدام البيانات الثابتة مباشرة
+    setLoading(true);
+    setBrands(brandsData);
+    setLoading(false);
   }, []);
 
   const settings = {

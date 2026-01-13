@@ -6,4 +6,10 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: "ar",
+
+  // Always show locale prefix in URL
+  localePrefix: "always",
+
+  // Disable automatic locale detection - always use default locale
+  localeDetection: false,
 });

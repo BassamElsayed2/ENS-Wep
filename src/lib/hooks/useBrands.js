@@ -36,4 +36,3 @@ export function useBrands() {
 
   return { data, loading, error };
 }
-

@@ -1,12 +1,24 @@
 "use client"
 import Slider from "react-slick";
-import { useLocale, useTranslations } from "next-intl";
-import data from '../../Data/brand1.json';
+import { useLocale } from "next-intl";
+import brand1Data from '../../Data/brand1Data.json';
 import Image from "next/image";
 
+function resolveLang(locale) {
+  const base = String(locale || "").split(/[-_]/)[0].toLowerCase();
+  return base === "ar" ? "ar" : "en";
+}
+
+function pickLocalized(obj, lang) {
+  if (obj == null) return "";
+  if (typeof obj === "string") return obj;
+  return obj[lang] ?? obj.en ?? obj.ar ?? "";
+}
+
 const Brand2 = () => {
-  const t = useTranslations("Brand1");
   const locale = useLocale();
+  const lang = resolveLang(locale);
+  const data = brand1Data.brands;
 
     const settings = {
         dots: false,
@@ -48,7 +60,7 @@ const Brand2 = () => {
                 <div className="container">
                     <div className="brand-slider-wrapper style2">
                         <h2 className="single-section-title wow fadeInUp" data-wow-delay=".2s">
-                            {t("title")}
+                            {pickLocalized(brand1Data.title, lang)}
                         </h2>
                         <div className="row">
                             <div className="slider-area brandSliderTwo">

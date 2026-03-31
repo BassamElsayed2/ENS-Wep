@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
-import brandsData from "../../Data/brand1.json";
+import brand1Data from "../../Data/brand1Data.json";
 import SectionTitle from "../Common/SectionTitle";
 
 const OurWorks = () => {
@@ -16,7 +16,7 @@ const OurWorks = () => {
   useEffect(() => {
     // استخدام البيانات الثابتة مباشرة
     setLoading(true);
-    setBrands(brandsData);
+    setBrands(brand1Data.brands || []);
     setLoading(false);
   }, []);
 

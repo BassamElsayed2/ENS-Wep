@@ -1,0 +1,160 @@
+{
+  "title": {
+    "ar": "عملاء يعتمدون على خدماتنا",
+    "en": "Millions of clients trust us."
+  },
+  "sectionLead": {
+    "ar": "نفتخر بثقة عملائنا وشراكاتنا المستمرة، ونعمل دائماً على تقديم خدمات تليق بتوقعاتهم وتدعم نمو أعمالهم.",
+    "en": "We are proud of our clients' trust and lasting partnerships, and we work every day to deliver services that meet their expectations and support their growth."
+  },
+  "loading": {
+    "ar": "جاري تحميل العلامات التجارية...",
+    "en": "Loading brands..."
+  },
+  "noBrands": {
+    "ar": "لا توجد علامات تجارية متاحة في الوقت الحالي.",
+    "en": "No brands available at the moment."
+  },
+  "cardTitleFallback": {
+    "ar": "شريك",
+    "en": "Partner"
+  },
+  "brands": [
+    {
+      "id": 1,
+      "img": "/assets/images/logo/brandLogo1_1.png",
+      "name": { "ar": "شركة 1", "en": "Company 1" },
+      "description": {
+        "ar": ["وصف مختصر عن الشركة ومجال عملها."],
+        "en": [
+          "A short description of the company and its field of work.",
+          "You can add a second paragraph or more in the same array format."
+        ]
+      },
+      "points": {
+        "ar": [
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية."
+        ],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "img": "/assets/images/logo/brandLogo1_2.png",
+      "name": { "ar": "شركة 2", "en": "Company 2" },
+      "description": {
+        "ar": ["فقرة واحدة كافية إن أردت؛ أو عدة فقرات."],
+        "en": [
+          "One paragraph is enough, or use an array for several paragraphs."
+        ]
+      },
+      "points": {
+        "ar": ["فقرة نصية.", "فقرة نصية.", "فقرة نصية.", "فقرة نصية."],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "img": "/assets/images/logo/brandlogo13.png",
+      "name": { "ar": "شركة 3", "en": "Company 3" },
+      "description": {
+        "ar": ["وصف مختصر عن الشركة ومجال عملها."],
+        "en": ["A short description of the company and its field of work."]
+      },
+      "points": {
+        "ar": [
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية.",
+          "فقرة نصية."
+        ],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "img": "/assets/images/logo/brandLogo1_4.png",
+      "name": { "ar": "شركة 4", "en": "Company 4" },
+      "description": {
+        "ar": ["وصف مختصر عن الشركة ومجال عملها."],
+        "en": ["A short description of the company and its field of work."]
+      },
+      "points": {
+        "ar": ["فقرة نصية.", "فقرة نصية.", "فقرة نصية.", "فقرة نصية."],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "img": "/assets/images/logo/brandLogo1_5.png",
+      "name": { "ar": "شركة 5", "en": "Company 5" },
+      "description": {
+        "ar": ["وصف مختصر عن الشركة ومجال عملها."],
+        "en": ["A short description of the company and its field of work."]
+      },
+      "points": {
+        "ar": ["فقرة نصية.", "فقرة نصية.", "فقرة نصية.", "فقرة نصية."],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "img": "/assets/images/logo/brandlogo13.png",
+      "name": { "ar": "شركة 6", "en": "Company 6" },
+      "description": {
+        "ar": ["وصف مختصر عن الشركة ومجال عملها."],
+        "en": ["A short description of the company and its field of work."]
+      },
+      "points": {
+        "ar": ["فقرة نصية.", "فقرة نصية.", "فقرة نصية.", "فقرة نصية."],
+        "en": [
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text.",
+          "A paragraph of text."
+        ]
+      }
+    }
+  ]
+}

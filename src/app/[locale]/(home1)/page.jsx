@@ -28,9 +28,9 @@ const page = () => {
         title={t("hero.title")}
         content={t("hero.content")}
         btnname={t("hero.btn1")}
-        btnurl={`/${locale}/contact`}
+        btnurl={`#`}
         btntwo={t("hero.btn2")}
-        btn2url={`/${locale}/about`}
+        btn2url={`#`}
         cusimg="/assets/images/intro/introProfileThumb1_1.png"
         cusnumber="240"
         cuscontent={t("hero.customers")}
@@ -53,7 +53,7 @@ const page = () => {
         btnname={t("about.btn")}
         btnurl={`/${locale}/about`}
       ></About1>
-         <Feature12></Feature12>
+      <Feature12></Feature12>
       <HowWork></HowWork>
       <Choose1
         subtitle={t("choose.subtitle")}

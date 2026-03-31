@@ -1,14 +1,14 @@
 {
   "HomePage": {
     "hero": {
-  "subtitle": "<span>Go Ahead!</span> Safe and Innovative Digital Solutions",
-  "title": "We Design the Future of Technology with Confident Steps",
-  "content": "Welcome to the world of ENS, where creativity turns into technology that makes a difference.\nAt ENS, we develop software and design websites with high professionalism.\nWe transform your ideas into innovative digital solutions that keep pace with the future.",
-  "btn1": "Get Started",
-  "btn2": "Learn More",
-  "customers": "Comment",
-  "rating": "Rating"
-},
+      "subtitle": "<span>Go Ahead!</span> Safe and Innovative Digital Solutions",
+      "title": "We Design the Future of Technology with Confident Steps",
+      "content": "Welcome to the world of ENS, where creativity turns into technology that makes a difference.\nAt ENS, we develop software and design websites with high professionalism.\nWe transform your ideas into innovative digital solutions that keep pace with the future.",
+      "btn1": "Get Started",
+      "btn2": "Learn More",
+      "customers": "Comment",
+      "rating": "Rating"
+    },
     "about": {
       "subtitle": "Advanced Technologies",
       "title": "We Help You Develop Your Business",
@@ -37,7 +37,7 @@
   "HowWork": {
     "SubTitle": "Our Services",
     "Title": "Advanced Services with the Latest Technologies",
-     "steps": [
+    "steps": [
       {
         "step": "Website and Email Hosting",
         "title": "Security | Speed | Reliability",
@@ -125,7 +125,7 @@
   },
   "FaqSection": {
     "subtitle": "FAQs",
-   "title": "Most Frequently Asked Questions",
+    "title": "Most Frequently Asked Questions",
     "description": "We’ve gathered the most common questions about our services in hosting, software solutions, design, and corporate security. This section helps you easily understand what we offer and quickly find answers to your inquiries.",
     "faqItems": [
       {
@@ -240,7 +240,13 @@
       "In the end, integrated network systems from ENS provide comprehensive solutions that combine high performance, strong security, and ease of management. With our expert team, you can build a strong technical infrastructure that supports your business growth and improves your team's productivity."
     ],
     "tagsLabel": "Tags:",
-    "tags": ["Networks", "Productivity", "Infrastructure", "Technology", "Security"]
+    "tags": [
+      "Networks",
+      "Productivity",
+      "Infrastructure",
+      "Technology",
+      "Security"
+    ]
   },
   "BlogArticle_Cybersecurity": {
     "topImage": "/assets/security-banner.jpg",
@@ -837,12 +843,6 @@
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "backHome": "Back to Home",
     "contactUs": "Contact Us"
-  },
-  "Brand1": {
-    "title": "Millions of clients trust us.",
-    "loading": "Loading brands...",
-    "noBrands": "No brands available at the moment.",
-    "error": "Error"
   },
   "OurWorks": {
     "SubTitle": "Our Works",

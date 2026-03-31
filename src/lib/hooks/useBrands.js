@@ -6,7 +6,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import brandsData from "../../app/Data/brand1.json";
+import brand1Data from "../../app/Data/brand1Data.json";
 import { mapBrandsToComponent } from "../utils/dataMapper";
 
 /**
@@ -24,7 +24,7 @@ export function useBrands() {
       setError(null);
 
       // استخدام البيانات الثابتة مباشرة
-      const mappedData = mapBrandsToComponent(brandsData || []);
+      const mappedData = mapBrandsToComponent(brand1Data.brands || []);
       setData(mappedData);
     } catch (err) {
       setError(null);
